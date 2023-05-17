@@ -1,0 +1,251 @@
+{
+  "versions":[
+    {
+      "title": "Vanilla (Y1S0)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954755913292611614/vanilla.png",
+        "description": "Operators: Vanilla OPs\nMaps: Vanilla Maps"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "8358812283631269928"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "3893422760579204530"
+        }
+      ]
+    },
+    {
+      "title": "Black Ice (Y1S1)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753092430204928/blackice.png",
+        "description": "Operators: Buck, Frost\nMaps: Yacht"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "5188997148801516344"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "7932785808040895147"
+        }
+      ]
+    },
+    {
+      "title": "Dust Line (Y1S2)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753091817857144/dustline.png",
+        "description": "Operators: Blackbeard, Valkyrie\nMaps: Border"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "2303064029242396590"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "2206497318678061176"
+        }
+      ]
+    },
+    {
+      "title": "Skull Rain (Y1S3)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753113921814578/skullrain.png",
+        "description": "Operators: Capitao, Caveira\nMaps: Favela"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "5819137024728546741"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "5851804596427790505"
+        }
+      ]
+    },
+    {
+      "title": "Red Crow (Y1S4)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753106107834498/redcrow.png",
+        "description": "Operators: Hibana, Echo\nMaps: Skyscraper"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "3576607363557872807"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "8569920171217002292"
+        }
+      ]
+    },
+    {
+      "title": "Velvet Shell (Y2S1)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753114475491388/velvetshell.png",
+        "description": "Operators: Jackal, Mira\nMaps: Coastline"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "2248734317261478192"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "8006071763917433748"
+        }
+      ]
+    },
+    {
+      "title": "Health (Y2S2)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753105126363146/health.png",
+        "description": "Operators: None\nMaps: None\nBug fixes lol"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "5875987479498297665"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "708773000306432190"
+        }
+      ]
+    },
+    {
+      "title": "Blood Orchid (Y2S3)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753092711235604/bloodorchid.png",
+        "description": "Operators: Ying, Lesion, Ela\nMaps: Themepark"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "6708129824495912434"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "1613631671988840841"
+        }
+      ]
+    },
+    {
+      "title": "White Noise (Y2S4)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753115075256411/whitenoise.png",
+        "description": "Operators: Dokkaebi, Zofia, Vigil\nMaps: Tower"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "8748734086032257441"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "4221297486420648079"
+        }
+      ]
+    },
+    {
+      "title": "Chimera (Y3S1)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753090228191263/chimera_2.png",
+        "description": "Operators: Lion, Finka\nMaps: None\nMode: Outbreak"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "5071357104726974256"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "4701787239566783972"
+        }
+      ]
+    },
+    {
+      "title": "Para Bellum (Y3S2)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753105629687828/parabellum.png",
+        "description": "Operators: Alibi, Maestro\nMaps: Villa"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "8312108283310615233"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "8765715607275074515"
+        }
+      ]
+    },
+    {
+      "title": "Grim Sky (Y3S3)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954753104769851392/grimsky.pn",
+        "description": "Operators: Maverick, Clash\nMaps: Herford Base Rework\nMode: Mad House"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "5562094852451837435"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "7781202564071310413"
+        }
+      ]
+    },
+    {
+      "title": "Wind Bastion (Y3S4)",
+      "metadata": {
+        "artwork_url": "https://cdn.discordapp.com/attachments/804937376211533844/954758007655378964/windbastion.png",
+        "description": "Operators: Nomad, Kaid\nMaps: Fortress"
+      },
+      "contents": [
+        {
+          "appId": "359550",
+          "depotId": "377237",
+          "manifestId": "6502258854032233436"
+        },
+        {
+          "appId": "359550",
+          "depotId": "359551",
+          "manifestId": "7659555540733025386"
+        }
+      ]
+    }
+  ]
+}
