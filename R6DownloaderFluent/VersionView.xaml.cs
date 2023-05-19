@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -17,6 +18,11 @@ public partial class VersionView : UserControl
 
     private void Btn_start_OnClick(object sender, RoutedEventArgs e)
     {
+        /*
+        string file1 = "Downloads\\" + this.cur_version.title + "\\RainbowSixGame.exe";
+        string file2 = "Downloads\\" + this.cur_version.title + "\\RainbowSix.exe";
+        FileInfo fi = new FileInfo(file1);
+        */
         throw new NotImplementedException();
     }
 
@@ -28,6 +34,15 @@ public partial class VersionView : UserControl
 
     private void Btn_uninstall_OnClick(object sender, RoutedEventArgs e)
     {
-        throw new NotImplementedException();
+        string versionPath = "Downloads\\" + this.cur_version.title;
+        if (Directory.Exists(versionPath))
+        {
+            Directory.Delete(versionPath, true);
+            new Notify(this.cur_version.title + " has been uninstalled successfully").ShowDialog();
+        }
+        else
+        {
+            new Notify(this.cur_version.title + " is not installed").ShowDialog();
+        }
     }
 }
