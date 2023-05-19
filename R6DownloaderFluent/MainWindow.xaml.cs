@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Wpf.Ui.Controls.ThumbRateControl;
+using Wpf.Ui.Controls.TitleBarControl;
 using Wpf.Ui.Controls.Window;
 
 namespace R6DownloaderFluent
@@ -43,10 +45,27 @@ namespace R6DownloaderFluent
         #endregion
         public MainWindow()
         {
-            AttachToConsole();
-            steam_credentials = steamCreds.FromJsonFile("creds.json");
-            MessageBox.Show(steam_credentials.username);
             InitializeComponent();
+            AppStartup();
+            
+        }
+
+        public void AppStartup()
+        {
+            
+            AttachToConsole();
+            if (File.Exists("creds.json"))
+            {
+                steam_credentials = steamCreds.FromJsonFile("creds.json");
+            }
+            else
+            {
+                do
+                {
+                    new SteamCredentials().ShowDialog();
+                } while (steam_credentials == null);
+            }
+            //steam_credentials = steamCreds.FromJsonFile("creds.json");
             AppDomain currentDomain = default(AppDomain);
             currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += GlobalUnhandledExceptionHandler;
@@ -81,7 +100,7 @@ namespace R6DownloaderFluent
                 string inputRead = (string)Dispatcher.Invoke(() =>
                 {
                     //Creating a InputBox window to get user input for the 2FA Code
-                    return UX.CreateTwoFactorPrompt();
+                    return FluentUX.CreateTwoFactorPrompt();
                 });
                 return inputRead;
             };
@@ -110,6 +129,10 @@ namespace R6DownloaderFluent
             TitleBar2.Title = "R6DownloaderFluent - v" + version.ToString();
         }
 
-        
+
+        private void TitleBar2_OnMinimizeClicked(TitleBar sender, RoutedEventArgs args)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

@@ -28,7 +28,7 @@ public partial class InstallDialog : UserControl
                 new DownloaderArgument(ArgType.ManifestId, content.manifestId),
                 new DownloaderArgument(ArgType.Username, MainWindow.steam_credentials.username),
                 new DownloaderArgument(ArgType.Password, MainWindow.steam_credentials.password),
-                new DownloaderArgument(ArgType.Directory, @"H:\OLD SIEGE\WEENEG")
+                new DownloaderArgument(ArgType.Directory, "Downloads\\" + installing_version.title)
             }));
         }
         DepotDownloaderLib.RunDownload(dwnlds, true);

@@ -19,6 +19,15 @@ public class steamCreds
     {
         return JsonConvert.DeserializeObject<steamCreds>(File.ReadAllText(path));
     }
+
+    public void writeJsonToFile()
+    {
+        string jsonStr = JsonConvert.SerializeObject(this);
+        using (StreamWriter writer = new StreamWriter("creds.json"))
+        {
+            writer.WriteLine(jsonStr);
+        }
+    }
 }
 
 

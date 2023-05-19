@@ -17,13 +17,13 @@ public partial class VersionView : UserControl
 
     private void Btn_start_OnClick(object sender, RoutedEventArgs e)
     {
-        ((MainWindow)App.Current.MainWindow).border_content.Child = new InstallDialog(this.cur_version);
+        throw new NotImplementedException();
     }
 
 
     private void Btn_install_OnClick(object sender, RoutedEventArgs e)
     {
-        
+        ((MainWindow)App.Current.MainWindow).border_content.Child = new InstallDialog(this.cur_version);
     }
 
     private void Btn_uninstall_OnClick(object sender, RoutedEventArgs e)

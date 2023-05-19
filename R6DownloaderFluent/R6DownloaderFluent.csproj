@@ -5,22 +5,18 @@
         <TargetFramework>net7.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
-        <AssemblyVersion>1.0.0.2</AssemblyVersion>
+        <AssemblyVersion>1.0.0.3</AssemblyVersion>
         <ApplicationIcon>health.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="DepotDownloaderLib" Version="1.0.8" />
-      <PackageReference Include="DepotDownloaderUX" Version="1.0.0" />
+      <PackageReference Include="DepotDownloaderLib" Version="1.0.9" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="WPF-UI" Version="3.0.0-preview.2" />
     </ItemGroup>
 
     <ItemGroup>
       <None Update="versions.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="creds.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
