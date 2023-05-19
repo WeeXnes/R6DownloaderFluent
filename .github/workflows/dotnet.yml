@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Get current date
       id: date
-      run: Get-Date -format "yyyy-MM-dd" >> $TIMESTAMP_VAR
+      run: Get-Date -format "yyyy-MM-dd"
       shell: pwsh
     - uses: actions/checkout@v3
     - name: Setup .NET
