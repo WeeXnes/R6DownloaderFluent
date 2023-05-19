@@ -76,6 +76,8 @@ namespace R6DownloaderFluent
 
                 Console.SetOut(consoleWriter);
             }
+            
+            border_content.Child = new WelcomeView();
         }
         private static void GlobalUnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
@@ -129,10 +131,5 @@ namespace R6DownloaderFluent
             TitleBar2.Title = "R6DownloaderFluent - v" + version.ToString();
         }
 
-
-        private void TitleBar2_OnMinimizeClicked(TitleBar sender, RoutedEventArgs args)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
     }
 }

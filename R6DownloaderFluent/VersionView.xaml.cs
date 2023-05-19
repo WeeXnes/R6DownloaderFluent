@@ -18,12 +18,40 @@ public partial class VersionView : UserControl
 
     private void Btn_start_OnClick(object sender, RoutedEventArgs e)
     {
-        /*
         string file1 = "Downloads\\" + this.cur_version.title + "\\RainbowSixGame.exe";
+        bool file1_exists = false;
         string file2 = "Downloads\\" + this.cur_version.title + "\\RainbowSix.exe";
-        FileInfo fi = new FileInfo(file1);
-        */
-        throw new NotImplementedException();
+        bool file2_exists = false;
+        ////////////////////////////
+        if(File.Exists(file1))
+            file1_exists = true;
+        ////////////////////////////
+        if(File.Exists(file2))
+            file2_exists = true;
+        
+        if (file1_exists && !file2_exists)
+        {
+            //Launch File 1
+        }
+        else if (!file1_exists && file2_exists)
+        {
+            //Launch File 2
+        }
+        else if (file1_exists && file2_exists)
+        {
+            
+            FileInfo fi1 = new FileInfo(file1);
+            FileInfo fi2 = new FileInfo(file2);
+            if (fi1.Length > fi2.Length)
+            {
+                //Launch File 1
+            }
+            else if (fi2.Length > fi1.Length)
+            {
+                //Launch File 2
+            }
+            
+        }
     }
 
 
