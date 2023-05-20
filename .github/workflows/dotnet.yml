@@ -44,6 +44,7 @@ jobs:
         prerelease: false
         release_name: ${{env.GENERATOR_PLATFORM}}
         tag_name: ${{env.GENERATOR_PLATFORM}}
+        body: ${{github.event.head_commit.message}}
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: upload windows artifact
