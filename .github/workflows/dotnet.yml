@@ -19,10 +19,10 @@ jobs:
       id: date_command
       run: |
        $date_str = Get-Date -format "hh-mm_dd-MM-yyyy"
-       echo ::set-output name=date_str::$( $date_str)
+       echo "GENERATOR_PLATFORM=$date_str" >> $env:GITHUB_ENV
       shell: pwsh
     - name: Print
-      run: echo ${{ steps.run.date_command.outputs.date_str }}
+      run: echo $env:GENERATOR_PLATFORM
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
