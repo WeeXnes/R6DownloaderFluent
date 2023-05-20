@@ -18,11 +18,11 @@ jobs:
     - name: Get current date
       id: date_command
       run: |
-       $output = Get-Date -format "hh-mm_dd-MM-yyyy"
-       Write-Host "::set-output name=date::$output"
-      shell: pwsh
+       $date_str = Get-Date -format "hh-mm_dd-MM-yyyy"
+       echo ::set-output name=date_str::$( $date_str)
+       shell: pwsh
     - name: Print
-      run: echo ${{ steps.run.date_command.outputs.date }}
+      run: echo ${{ steps.run.date_command.outputs.date_str }}
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
