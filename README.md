@@ -2,7 +2,7 @@
     <img width="100" height="100" src="https://cdn.discordapp.com/attachments/804937376211533844/954827979027017748/health.png">
 </div>
 <h1 align="center">R6DownloaderFluent</h1>
-<h3 align="center">a tool to download old versions of siege</h3>
+<h3 align="center">Unlock the Past, download old siege versions</h3>
 <div align="center">
   
 Built with:
