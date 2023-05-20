@@ -32,3 +32,32 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build
+    - name: Pack Files
+      run: Compress-Archive -Path R6DownloaderFluent\bin\Release\net7.0-windows\ -DestinationPath release.zip
+      
+      
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{env.GENERATOR_PLATFORM}}
+        tag_name: ${{env.GENERATOR_PLATFORM}}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: upload windows artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: D:\a\R6DownloaderFluent\R6DownloaderFluent\release.zip
+        asset_name: currentRelease.zip
+        asset_content_type: application/zip
+      
+      
+      
+      
+      
+      
