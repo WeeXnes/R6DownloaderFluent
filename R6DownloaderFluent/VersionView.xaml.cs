@@ -30,6 +30,8 @@ public partial class VersionView : UserControl
         if(File.Exists(file2))
             file2_exists = true;
         
+        //Hopefully working, not tested
+        
         if (file1_exists && !file2_exists)
         {
             Process.Start(file1);
