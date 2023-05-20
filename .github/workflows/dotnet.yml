@@ -1,0 +1,64 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Get current date
+      id: date_command
+      run: |
+       $date_str = Get-Date -format "hh-mm_dd-MM-yyyy"
+       echo "GENERATOR_PLATFORM=$date_str" >> $env:GITHUB_ENV
+      shell: pwsh
+    - name: Print
+      run: echo $env:GENERATOR_PLATFORM
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release
+    - name: Pack Files
+      run: Compress-Archive -Path R6DownloaderFluent\bin\Release\net7.0-windows\ -DestinationPath release.zip
+      
+      
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{env.GENERATOR_PLATFORM}}
+        tag_name: ${{env.GENERATOR_PLATFORM}}
+        body: ${{github.event.head_commit.message}}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: upload windows artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: D:\a\R6DownloaderFluent\R6DownloaderFluent\release.zip
+        asset_name: currentRelease.zip
+        asset_content_type: application/zip
+      
+      
+      
+      
+      
+      
