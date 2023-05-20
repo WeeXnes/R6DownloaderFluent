@@ -31,7 +31,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build
+      run: dotnet build --configuration Release
     - name: Pack Files
       run: Compress-Archive -Path R6DownloaderFluent\bin\Release\net7.0-windows\ -DestinationPath release.zip
       
