@@ -32,12 +32,10 @@ public partial class VersionView : UserControl
         
         if (file1_exists && !file2_exists)
         {
-            //Launch File 1
             Process.Start(file1);
         }
         else if (!file1_exists && file2_exists)
         {
-            //Launch File 2
             Process.Start(file2);
         }
         else if (file1_exists && file2_exists)
@@ -47,12 +45,10 @@ public partial class VersionView : UserControl
             FileInfo fi2 = new FileInfo(file2);
             if (fi1.Length > fi2.Length)
             {
-                //Launch File 1
                 Process.Start(file1);
             }
             else if (fi2.Length > fi1.Length)
             {
-                //Launch File 2
                 Process.Start(file2);
             }
             
