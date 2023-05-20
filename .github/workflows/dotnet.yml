@@ -20,7 +20,7 @@ jobs:
       run: |
        $date_str = Get-Date -format "hh-mm_dd-MM-yyyy"
        echo ::set-output name=date_str::$( $date_str)
-       shell: pwsh
+      shell: pwsh
     - name: Print
       run: echo ${{ steps.run.date_command.outputs.date_str }}
     - uses: actions/checkout@v3
