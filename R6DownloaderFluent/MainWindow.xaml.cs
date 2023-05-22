@@ -131,5 +131,19 @@ namespace R6DownloaderFluent
             TitleBar2.Title = "R6DownloaderFluent - v" + version.ToString();
         }
 
+        private void FrameworkElement_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            /*
+            var border = (Border)sender;
+            var buttonObj = ((Border) sender).DataContext;
+            version versionFromButtonObj = (version) buttonObj;
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(
+                new Uri(versionFromButtonObj.metadata.artwork_url));
+            myBrush.ImageSource = image.Source;
+            //border.Background = myBrush;
+            */
+        }
     }
 }
